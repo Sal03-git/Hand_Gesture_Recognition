@@ -6,7 +6,6 @@ import argparse
 import itertools
 from collections import Counter
 from collections import deque
-from bluetooth_transmit import send_to_speedybee
 
 
 import cv2 as cv
