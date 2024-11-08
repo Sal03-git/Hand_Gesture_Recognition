@@ -6,6 +6,8 @@ import argparse
 import itertools
 from collections import Counter
 from collections import deque
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 
 import cv2 as cv
@@ -72,14 +74,14 @@ def main():
     point_history_classifier = PointHistoryClassifier()
 
     # Read labels ###########################################################
-    with open('D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\model\keypoint_classifier\keypoint_classifier_label.csv',
+    with open('D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\Hand_Gesture_Recognition\model\keypoint_classifier\keypoint_classifier_label.csv',
               encoding='utf-8-sig') as f:
         keypoint_classifier_labels = csv.reader(f)
         keypoint_classifier_labels = [
             row[0] for row in keypoint_classifier_labels
         ]
     with open(
-            'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\model\point_history_classifier\point_history_classifier_label.csv',
+            'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\Hand_Gesture_Recognition\model\point_history_classifier\point_history_classifier_label.csv',
             encoding='utf-8-sig') as f:
         point_history_classifier_labels = csv.reader(f)
         point_history_classifier_labels = [
@@ -283,12 +285,12 @@ def logging_csv(number, mode, landmark_list, point_history_list):
     if mode == 0:
         pass
     if mode == 1 and (0 <= number <= 9):
-        csv_path = 'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\model\keypoint_classifier\keypoint.csv'
+        csv_path = 'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\Hand_Gesture_Recognition\model\keypoint_classifier\keypoint.csv'
         with open(csv_path, 'a', newline="") as f:
             writer = csv.writer(f)
             writer.writerow([number, *landmark_list])
     if mode == 2 and (0 <= number <= 9):
-        csv_path = 'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\model\point_history_classifier\point_history.csv'
+        csv_path = 'D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\Hand_Gesture_Recognition\model\point_history_classifier\point_history.csv'
         with open(csv_path, 'a', newline="") as f:
             writer = csv.writer(f)
             writer.writerow([number, *point_history_list])

@@ -6,7 +6,7 @@ import tensorflow as tf
 class KeyPointClassifier(object):
     def __init__(
         self,
-        model_path='D:/School/Term 7/Automatic Control/Ai model code/Python/Code 2/model/keypoint_classifier/keypoint_classifier.tflite',  # Ensure the path is correct
+        model_path='D:\School\Term 7\Automatic Control\Ai model code\Python\Code 2\Hand_Gesture_Recognition\model\keypoint_classifier\keypoint_classifier.tflite',  # Ensure the path is correct
         num_threads=1,
     ):
         # Use the model_path parameter instead of hardcoding the path
