@@ -1,0 +1,46 @@
+To get the Bluetooth MAC address for your SpeedyBee module, follow these steps:
+
+1. Finding the Bluetooth MAC Address on Your Laptop (Windows)
+Pair SpeedyBee with your laptop:
+Make sure your SpeedyBee module is powered on and in Bluetooth pairing mode.
+Open Bluetooth settings on your laptop and pair it with the SpeedyBee module.
+Find the MAC address:
+After pairing, you can usually find the MAC address in the Bluetooth settings:
+On Windows:
+Open Settings > Devices > Bluetooth & other devices.
+Find your SpeedyBee module in the list of paired devices.
+Click on the device, and you might find details such as the MAC address.
+Using bluetooth (Linux/Windows):
+On Linux, you can use the bluetoothctl command:
+
+bash
+Copy code
+bluetoothctl
+Then, type paired-devices to list the devices and their MAC addresses.
+
+On Windows, you can also use the Bluetooth Command Line Tools to list the paired devices and their MAC addresses.
+
+2. Finding the Bluetooth MAC Address on Your Laptop (MacOS)
+Pair SpeedyBee with your laptop:
+
+Ensure your SpeedyBee module is in Bluetooth pairing mode.
+Go to System Preferences > Bluetooth, and pair with the SpeedyBee module.
+Find the MAC address:
+
+Open Terminal and type the following command to list Bluetooth devices:
+
+bash
+Copy code
+system_profiler SPBluetoothDataType
+This will show a list of Bluetooth devices and their MAC addresses.
+
+3. Alternatively, Use a Bluetooth Scanning Tool
+You can use a Bluetooth scanning tool (like Bluetooth View on Windows or LightBlue Explorer on macOS/Windows) to scan for nearby Bluetooth devices. These tools will list the MAC addresses of all nearby Bluetooth devices, including your SpeedyBee.
+
+Example:
+Once you have the MAC address of SpeedyBee, you can replace "XX:XX:XX:XX:XX:XX" in the code with the actual MAC address of your SpeedyBee. For example:
+
+python
+Copy code
+speedybee_address = "00:1A:7D:DA:71:13"
+Let me know if you need any additional details or help with finding the address!
