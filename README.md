@@ -1,8 +1,8 @@
 # Contribution
-Salaheldeen Abdelmoneim
-Galaleldeen Abdelmoneim
-Mirna Shalkamy
-Esraa Reda
+Salaheldeen Abdelmoneim / 
+Galaleldeen Abdelmoneim / 
+Mirna Shalkamy / 
+Esraa Reda.
 
 # hand-gesture-recognition-using-mediapipe
 Estimate hand pose using MediaPipe (Python version).<br> This is a sample 
